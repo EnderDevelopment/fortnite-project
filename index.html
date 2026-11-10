@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drop Zone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <div><span class="eyebrow">BATTLE ISLAND</span><h1>DROP ZONE</h1></div>
+      <div class="status"><span class="live-dot"></span> SOLO MATCH <span id="match-status">READY</span></div>
+    </header>
+    <section class="game-layout" aria-label="Battle island game">
+      <div class="map-wrap">
+        <canvas id="game" width="960" height="600" aria-label="Game map. Use WASD or arrow keys to move and click to shoot."></canvas>
+        <div class="map-label">ISLAND MAP <span>WASD / ARROWS TO MOVE · CLICK TO FIRE</span></div>
+        <div class="center-message" id="message"><strong>DROP IN</strong><span>Explore the island. Find a weapon. Open the supply drop.</span><button id="start">START MATCH</button></div>
+      </div>
+      <aside class="sidebar">
+        <section class="panel"><h2>PLAYER</h2><div class="health-row"><span>HEALTH</span><b id="health-value">100</b></div><div class="meter"><i id="health-bar"></i></div><div class="shield-row"><span>SHIELD</span><b id="shield-value">50</b></div><div class="meter shield-meter"><i id="shield-bar"></i></div></section>
+        <section class="panel"><h2>LOADOUT</h2><div class="weapon-card"><span class="weapon-icon">▰</span><div><b id="weapon-name">NO WEAPON</b><small id="ammo">Find a gun on the island</small></div></div><div class="weapon-hint">Click or tap to fire</div></section>
+        <section class="panel"><h2>ISLAND LOCATIONS</h2><ul class="poi-list"><li><i class="poi-dot orange"></i><span>Dusty Depot</span><small>☷</small></li><li><i class="poi-dot blue"></i><span>Lazy Lake</span><small>⌂</small></li><li><i class="poi-dot green"></i><span>Pinewood</span><small>♧</small></li><li><i class="poi-dot red"></i><span>Supply Drop</span><small>▣</small></li></ul></section>
+        <section class="panel objective"><h2>OBJECTIVE</h2><p id="objective">Find a weapon, then open the supply drop.</p><div class="counter"><span>ELIMINATIONS</span><b id="kills">0</b></div></section>
+        <button class="reset-button" id="reset">RESTART MATCH</button>
+      </aside>
+    </section>
+    <footer>Fan-made island survival mini-game. No official Fortnite assets are used.</footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
